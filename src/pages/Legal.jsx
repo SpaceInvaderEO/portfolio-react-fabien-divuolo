@@ -1,66 +1,90 @@
-import { useState } from "react";
-
 function Legal() {
-  const [sections, setSections] = useState({
-    editor: true,
-    host: false,
-    credits: false
-  });
-
-  const toggleSection = (key) => {
-    setSections(prev => ({ ...prev, [key]: !prev[key] }));
-  };
-
   return (
     <div className="container mt-5">
-      <h1>Mentions légales</h1>
+      <h2 className="text-center mb-4">Mentions Légales</h2>
  
-      <div className="mb-3">
-        <button
-          className="btn btn-secondary mb-2"
-          onClick={() => toggleSection("editor")}
-        >
-          Éditeur du site
-        </button>
-        {sections.editor && (
-          <div className="p-3 border rounded">
-            <p>John Doe</p>
-            <p>Adresse : 123 Rue Exemple, 75000 Paris</p>
-            <p>Email : john@doe.com</p>
-          </div>
-        )}
-      </div>
+      <div className="accordion" id="legalAccordion">
  
-      <div className="mb-3">
-        <button
-          className="btn btn-secondary mb-2"
-          onClick={() => toggleSection("host")}
-        >
-          Hébergeur du site
-        </button>
-        {sections.host && (
-          <div className="p-3 border rounded">
-            <p>Hébergeur : OVH</p>
-            <p>Adresse : 2 rue Kellermann, 59100 Roubaix</p>
-            <p>Téléphone : 1007</p>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="headingEditor">
+            <button
+              className="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseEditor"
+              aria-expanded="true"
+              aria-controls="collapseEditor"
+            >
+              Éditeur du site
+            </button>
+          </h2>
+          <div
+            id="collapseEditor"
+            className="accordion-collapse collapse show"
+            aria-labelledby="headingEditor"
+            data-bs-parent="#legalAccordion"
+          >
+            <div className="accordion-body">
+              John Doe<br />
+              123 Rue du Web, 75000 Paris<br />
+              Email: john.doe@example.com
+            </div>
           </div>
-        )}
-      </div>
+        </div>
  
-      <div className="mb-3">
-        <button
-          className="btn btn-secondary mb-2"
-          onClick={() => toggleSection("credits")}
-        >
-          Crédits
-        </button>
-        {sections.credits && (
-          <div className="p-3 border rounded">
-            <p>Images : Unsplash, Pexels</p>
-            <p>Icônes : FontAwesome</p>
-            <p>Framework : React, Bootstrap, Vite</p>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="headingHost">
+            <button
+              className="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseHost"
+              aria-expanded="false"
+              aria-controls="collapseHost"
+            >
+              Hébergeur du site
+            </button>
+          </h2>
+          <div
+            id="collapseHost"
+            className="accordion-collapse collapse"
+            aria-labelledby="headingHost"
+            data-bs-parent="#legalAccordion"
+          >
+            <div className="accordion-body">
+              OVH SAS<br />
+              2 rue Kellermann – 59100 Roubaix – France<br />
+              Tel: 1007
+            </div>
           </div>
-        )}
+        </div>
+ 
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="headingCredits">
+            <button
+              className="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseCredits"
+              aria-expanded="false"
+              aria-controls="collapseCredits"
+            >
+              Crédits
+            </button>
+          </h2>
+          <div
+            id="collapseCredits"
+            className="accordion-collapse collapse"
+            aria-labelledby="headingCredits"
+            data-bs-parent="#legalAccordion"
+          >
+            <div className="accordion-body">
+              Images libres de droits : <a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">Pixabay</a><br />
+              Favicon : <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

@@ -1,32 +1,41 @@
 import { useState } from "react";
 import GitHubModal from "../components/GitHubModal";
+import heroImg from "../assets/hero.jpg";
 
 function Home() {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <div className="container mt-5">
-       
-      <div className="text-center mb-5">
-        <h1>John Doe</h1>
-        <h2>Développeur Web en formation</h2>
-        <button
-          className="btn btn-primary mt-3"
-          onClick={() => setModalOpen(true)}
-        >
-          En savoir plus
-        </button>
+    <div> 
+      <div
+        className="hero d-flex align-items-center justify-content-center text-center"
+        style={{
+          backgroundImage: `url(${heroImg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "100vh",
+          color: "white",
+        }}
+      >
+        <div>
+          <h1 className="display-4">John Doe</h1>
+          <p className="lead">Développeur Web en formation</p>
+          <button
+            className="btn btn-primary mt-3"
+            onClick={() => setModalOpen(true)}
+          >
+            En savoir plus
+          </button>
+        </div>
       </div>
-
-       
+ 
       <GitHubModal
         show={modalOpen}
         onClose={() => setModalOpen(false)}
-        username="github-johndoe" 
+        username="github-johndoe"  
       />
-
-       
-      <section>
+ 
+      <section className="container mt-5">
         <h3>Présentation</h3>
         <p>
           Bonjour, je suis John Doe, développeur web en formation. Je me spécialise
@@ -34,7 +43,6 @@ function Home() {
           les bonnes pratiques du web.
         </p>
 
-         
         <h4 className="mt-4">Compétences</h4>
         <div className="mb-3">
           <label>HTML/CSS</label>

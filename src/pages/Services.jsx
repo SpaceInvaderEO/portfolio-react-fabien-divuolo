@@ -1,51 +1,35 @@
+import ServiceCard from "../components/ServiceCard";
+
 function Services() {
-  const hoverStyle = {
-    backgroundColor: "#efefef",  
-    boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
-    transform: "translateY(-2px)",
-  };
-
-  const defaultStyle = {
-    backgroundColor: "#ffffff",
-    color: "#000",
-    cursor: "pointer",
-    minHeight: "150px",
-    padding: "1rem",
-    transition: "all 0.3s ease",
-    boxShadow: "none",       
-    transform: "translateY(0)",  
-  };
-
-  const servicesData = [
+  const services = [
     {
-      title: "Développement Front-end",
-      text: "Création d'interfaces utilisateur réactives et modernes.",
+      title: "Développement Web",
+      description: "Création de sites modernes et responsive.",
+      icon: "bi-laptop"
     },
     {
-      title: "Développement Back-end",
-      text: "Création d'API sécurisées et gestion de bases de données.",
+      title: "SEO",
+      description: "Optimisation du référencement naturel.",
+      icon: "bi-search"
     },
     {
-      title: "Responsive Design",
-      text: "Adaptation des sites pour tous les appareils (mobile, tablette, desktop).",
+      title: "Maintenance",
+      description: "Support et mises à jour régulières.",
+      icon: "bi-tools"
     },
   ];
 
   return (
     <div className="container mt-5">
-      <h2>Nos Services</h2>
-      <div className="row mt-4 g-4">
-        {servicesData.map((service, idx) => (
-          <div key={idx} className="col-md-4 d-flex">
-            <div
-              style={{ ...defaultStyle }}
-              onMouseEnter={(e) => Object.assign(e.currentTarget.style, hoverStyle)}
-              onMouseLeave={(e) => Object.assign(e.currentTarget.style, defaultStyle)}
-            >
-              <h5>{service.title}</h5>
-              <p>{service.text}</p>
-            </div>
-          </div>
+      <h2 className="text-center mb-4">Mes Services</h2>
+      <div className="row">
+        {services.map((service, idx) => (
+          <ServiceCard
+            key={idx}
+            title={service.title}
+            description={service.description}
+            icon={service.icon}
+          />
         ))}
       </div>
     </div>

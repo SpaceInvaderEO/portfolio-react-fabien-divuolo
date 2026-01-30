@@ -1,16 +1,56 @@
-# React + Vite
+# Portfolio Fabien Di Vuolo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site personnel réalisé avec React et Vite pour un devoir comptant pour ma formation via le CEF.
 
-Currently, two official plugins are available:
+## Prérequis
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js (v18 ou supérieur recommandé)
+- npm (inclus avec Node.js)
+- Navigateur moderne (Chrome, Firefox, Opera)
 
-## React Compiler
+## Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Cloner le repository  
+2. Se déplacer dans le dossier du projet 
+3. Installer les dépendances 
+4. Lancer le serveur de développement 
+5. Ouvrir le projet dans le navigateur à l’URL indiquée (par défaut http://localhost:5173/)
 
-## Expanding the ESLint configuration
+## Structure du projet
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- src/components : composants réutilisables (ProjectCard, ServiceCard, GitHubModal…)
+- src/pages : pages principales (Home, Services, Portfolio, Contact, Legal)
+- public/ : fichiers statiques (images, favicon...)
+- index.html : point d’entrée HTML
+- index.css : styles globaux
+- main.jsx : entrée React
+- vite.config.js : configuration Vite
+
+## Fonctionnalités principales
+
+- Pages : Home, Services, Portfolio, Contact, Legal
+- Composants réutilisables pour cards et modales
+- Modale GitHub affichant des informations depuis GitHub
+- Progress bars pour les compétences
+- Responsive design pour desktop et mobile
+- Effets interactifs : hover, animations, boutons
+- Mentions légales complètes (éditeur, hébergeur, crédits)
+
+## Bonnes pratiques de développement
+
+- Utilisation de React Hooks (useState, useEffect)
+- Composants modulaires et réutilisables
+- CSS personnalisé + Bootstrap pour la mise en page responsive
+- Messages de commit explicites pour chaque fonctionnalité
+
+## Validation W3C
+
+- Voir le dossier W3C
+
+## Auteur
+
+Fabien Di Vuolo – Développeur Web en formation   
+
+## Licence
+
+Projet personnel

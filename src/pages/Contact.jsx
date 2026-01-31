@@ -37,9 +37,9 @@ function Contact() {
  
         <div className="col-md-6">
           <h5>Mes coordonnées</h5>
-          <p><strong>Adresse :</strong> 123 Rue du Web, 75000 Paris</p>
-          <p><strong>Téléphone :</strong> +33 6 12 34 56 78</p>
-          <p><strong>Email :</strong> john.doe@example.com</p>
+          <p><strong>Adresse :</strong> 123 Rue du Code, 88525 Codeville</p>
+          <p><strong>Téléphone :</strong> +33 6 78 90 12 34</p>
+          <p><strong>Email :</strong> john@doe.com</p>
 
           <h5 className="mt-4">Localisation</h5>
           <div className="ratio ratio-16x9">

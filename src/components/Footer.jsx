@@ -9,8 +9,9 @@ function Footer() {
  
           <div className="col-md-4 mb-4">
             <h5>John Doe</h5>
-            <p>123 Rue Exemple, 75000 Paris</p>
-            <p>Tél : +33 6 12 34 56 78</p>
+            <p>123 rue du Code</p>
+            <p>86525 Codeville</p>
+            <p>Tél : +33 6 54 32 10 98</p>
             <div className="d-flex gap-2">
               <a 
                 href="https://github.com/github-johndoe" 

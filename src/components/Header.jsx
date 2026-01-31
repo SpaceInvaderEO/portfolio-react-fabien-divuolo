@@ -1,12 +1,18 @@
 import { NavLink } from "react-router-dom";
-import "./Header.css";  
 
 function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container"> 
-        <NavLink className="navbar-brand" to="/">John Doe</NavLink>
- 
+      <div className="container">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            "navbar-brand text-uppercase" + (isActive ? " active" : "")
+          }
+        >
+          John Doe
+        </NavLink>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -22,19 +28,58 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <NavLink className="nav-link text-uppercase" to="/">Accueil</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  "nav-link text-uppercase" + (isActive ? " active" : "")
+                }
+              >
+                Accueil
+              </NavLink>
             </li>
+
             <li className="nav-item">
-              <NavLink className="nav-link text-uppercase" to="/services">Services</NavLink>
+              <NavLink
+                to="/services"
+                className={({ isActive }) =>
+                  "nav-link text-uppercase" + (isActive ? " active" : "")
+                }
+              >
+                Services
+              </NavLink>
             </li>
+
             <li className="nav-item">
-              <NavLink className="nav-link text-uppercase" to="/portfolio">Portfolio</NavLink>
+              <NavLink
+                to="/portfolio"
+                className={({ isActive }) =>
+                  "nav-link text-uppercase" + (isActive ? " active" : "")
+                }
+              >
+                Portfolio
+              </NavLink>
             </li>
+
             <li className="nav-item">
-              <NavLink className="nav-link text-uppercase" to="/contact">Contact</NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  "nav-link text-uppercase" + (isActive ? " active" : "")
+                }
+              >
+                Contact
+              </NavLink>
             </li>
+
             <li className="nav-item">
-              <NavLink className="nav-link text-uppercase" to="/legal">Mentions légales</NavLink>
+              <NavLink
+                to="/legal"
+                className={({ isActive }) =>
+                  "nav-link text-uppercase" + (isActive ? " active" : "")
+                }
+              >
+                Mentions légales
+              </NavLink>
             </li>
           </ul>
         </div>
